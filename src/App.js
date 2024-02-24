@@ -19,7 +19,7 @@ class App extends Component {
 
     const response = await fetch(url, options)
     const jsonData = await response.json()
-    console.log(jsonData)
+
     const updatedData = jsonData.packages.map(item => ({
       id: item.id,
       name: item.name,
@@ -32,14 +32,14 @@ class App extends Component {
   render() {
     const {travelData, isLoading} = this.state
     return (
-      <div>
-        <h1>Travel Guide</h1>
+      <div className="app-container">
+        <h1 className="heading">Travel Guide</h1>
         {isLoading ? (
           <div data-testid="loader">
             <Loader type="TailSpin" color="#00BFFF" height={50} width={50} />
           </div>
         ) : (
-          <ul>
+          <ul className="items-container">
             {travelData.map(item => (
               <TravelDetails travelDetails={item} key={item.id} />
             ))}

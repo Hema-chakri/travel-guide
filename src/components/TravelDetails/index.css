@@ -1,0 +1,24 @@
+.image {
+  height: 250px;
+  width: 630px;
+  background-clip: content-box;
+}
+
+.list-item {
+  list-style-type: none;
+  background-color: #ffffff;
+}
+
+.name {
+  font-family: 'Roboto';
+  font-size: 25px;
+}
+
+.description {
+  font-family: 'Roboto';
+  font-size: 15px;
+}
+
+.para-and-heading {
+  padding-left: 20px;
+}
